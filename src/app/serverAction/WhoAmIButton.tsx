@@ -1,18 +1,15 @@
 'use client'
 import { useState } from 'react'
+import { whoAmI } from './whoAmI'
 
-interface Props {
-	whoAmIAction: () => Promise<string>
-}
-
-export function WhoAmIButton({ whoAmIAction }: Props) {
+export function WhoAmIButton() {
 	const [name, setName] = useState<string>()
 
 	return (
 		<div>
 			<button
 				onClick={async () => {
-					setName(await whoAmIAction())
+					setName(await whoAmI())
 				}}
 			>
 				Who am I?
