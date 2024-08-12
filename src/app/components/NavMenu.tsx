@@ -27,6 +27,14 @@ export function NavMenu() {
 						Protected route
 					</Link>
 				</li>
+				<li>
+					<Link
+						href="/serverAction"
+						aria-current={checkIsCurrentPage('/serverAction')}
+					>
+						Server action route
+					</Link>
+				</li>
 			</ul>
 		</nav>
 	)
