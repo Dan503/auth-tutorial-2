@@ -1,0 +1,21 @@
+.nav {
+	& ul {
+		display: flex;
+		list-style: none;
+		gap: 1em;
+		padding: 20px 0;
+		margin: 20px 0;
+		border: 1px solid wheat;
+		border-width: 1px 0;
+	}
+	& a {
+		color: aqua;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	& a[aria-current] {
+		font-weight: bold;
+		font-style: italic;
+	}
+}
