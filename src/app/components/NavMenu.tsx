@@ -43,6 +43,14 @@ export function NavMenu() {
 						API from client
 					</Link>
 				</li>
+				<li>
+					<Link
+						href="/apiFromServer"
+						aria-current={checkIsCurrentPage('/apiFromServer')}
+					>
+						API from server
+					</Link>
+				</li>
 			</ul>
 		</nav>
 	)
