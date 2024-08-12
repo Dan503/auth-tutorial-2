@@ -1,9 +1,13 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import { getServerSession } from 'next-auth'
 
 export default async function Home() {
+	const session = await getServerSession()
+
 	return (
 		<main className={styles.main}>
+			<p>Logged in user: {session?.user?.name || 'Not logged in'}</p>
 			<div className={styles.description}>
 				<p>
 					Get started by editing&nbsp;
